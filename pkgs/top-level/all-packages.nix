@@ -5766,6 +5766,8 @@ with pkgs;
     vala
     ;
 
+  frida-vala = callPackage ../development/compilers/frida-vala { };
+
   vyper = with python3Packages; toPythonApplication vyper;
 
   wrapCCWith =
@@ -7604,6 +7606,10 @@ with pkgs;
 
   fplll = callPackage ../development/libraries/fplll { };
   fplll_20160331 = callPackage ../development/libraries/fplll/20160331.nix { };
+
+  frida-core = callPackage ../development/libraries/frida-core { };
+
+  frida-gum = callPackage ../development/libraries/frida-gum { };
 
   freeimage = callPackage ../by-name/fr/freeimage/package.nix {
     openexr = openexr_2;
